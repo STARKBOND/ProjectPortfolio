@@ -8,16 +8,13 @@ jobs:
   build:
     docker:
       - image: 'tghastings/code-esaas'
-        environment: 
-          HEROKU_API_KEY: 1a97e88d-7b03-4f7b-a153-cd9a3b4a4f0a
-          SECRET_KEY_BASE: 78398d0c18776dbff3ee18af9c975efc491bd67dd67c4f8c0308ce2aa88d9f6c54d4dc7b83221b003d2decd7a0628a920d29623738e5ca705c6ed6c50ced2752
     steps:
       - checkout
       - run:
           name: rspec
           command: bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec
           # verbose alternative: bundle exec rake db:create db:schema:load --trace
-  deploy:
+  heroku_deploy:
     executor: heroku/default
     steps:
       - checkout
@@ -31,6 +28,6 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build
-      - deploy:
+      - heroku_deploy:
           requires:
             - build
