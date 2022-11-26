@@ -39,9 +39,9 @@ end
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ] 
   gem "sqlite3", "~> 1.4"
-  # gem "rspec-rails", "~> 4.0.1"
+  gem "rspec-rails", "~> 4.0.1"
   # gem "capybara"
-  # gem "simplecov", require: false
+  gem "simplecov", require: false
 end
 
 group :development do
