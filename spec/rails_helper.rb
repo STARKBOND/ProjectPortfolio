@@ -13,6 +13,7 @@ SimpleCov.start 'rails' do
   add_filter '/spec/' # for rspec
   add_filter 'app/channels/application_cable/' # web sockets
   add_filter 'app/helpers/' # helpers not implemented
+  add_filter 
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
