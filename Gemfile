@@ -34,6 +34,9 @@ gem "bootsnap", require: false
 # User model for authentication, registration, session, views, access control
 gem 'devise'
 
+# FactoryBot for mocks and stubs with testing
+gem 'factory_bot_rails'
+
 group :production do
   gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
