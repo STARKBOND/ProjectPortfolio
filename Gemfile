@@ -31,6 +31,9 @@ gem "tzinfo"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# User model for authentication, registration, session, views, access control
+gem 'devise'
+
 group :production do
   gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
