@@ -14,7 +14,7 @@ jobs:
           name: rspec
           command: bundle install && bundle exec rake db:migrate RAILS_ENV=test && bundle exec rspec
           # verbose alternative: bundle exec rake db:create db:schema:load --trace
-  heroku_deploy:
+  deploy:
     executor: heroku/default
     steps:
       - checkout
@@ -28,6 +28,6 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build
-      - heroku_deploy:
+      - deploy:
           requires:
             - build
