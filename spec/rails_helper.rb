@@ -11,7 +11,8 @@ SimpleCov.start 'rails' do
   add_filter '/bin/'
   add_filter '/db/'
   add_filter '/spec/' # for rspec
-  # TO DO: add filters to get at least 70% code coverage
+  add_filter 'app/channels/application_cable/' # web sockets
+  add_filter 'app/helpers/' # helpers not implemented
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
