@@ -7,6 +7,10 @@ Ruby on Rails app for hosting student portfolios! Developed in CS 3300 — Intro
 Remember to migrate database on Heroku with pushes: `heroku rake db:migrate`
 Creating integration tests for features: `bundle exec rails g rspec:feature projects`
 
+# Known Issues
+
+CircleCI will always report, "Coverage report generated for RSpec to /root/project/coverage. 0 / X LOC (0.0%) covered." I've tried every 
+
 <!--This README would normally document whatever steps are necessary to get the
 application up and running.
 
