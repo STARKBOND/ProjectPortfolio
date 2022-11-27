@@ -5,17 +5,6 @@
 require "rails_helper"
 require 'database_cleaner/active_record'
 
-# RSpec.describe ProjectsController, type: :controller do
-#   before(:context) do
-#     RSpec::Mocks.with_temporary_scope do
-#       @user = create(:user)
-#     end
-#   end
-#   it "should print user" do
-#     puts @user.inspect 
-#   end
-# end
-
 RSpec.describe ProjectsController, type: :controller do
   before(:context) do
     RSpec::Mocks.with_temporary_scope do
@@ -23,6 +12,9 @@ RSpec.describe ProjectsController, type: :controller do
       @project = Project.create(title: "Test title", description: "Test description")
     end
   end
+
+  before(:each) { sign_in @user }
+
   context "GET #index" do
     it "returns a success response (any user is able to see projects homepage)" do
       get :index
