@@ -1,4 +1,5 @@
 require "rails_helper"
+require 'database_cleaner/active_record'
 
 RSpec.describe Project, type: :model do
   context "stub" do
@@ -25,15 +26,14 @@ RSpec.describe Project, type: :model do
     context "scopes tests" do
       let(:params) { { title: "Title", description: "some description" } }
       before(:each) do
+        DatabaseCleaner.clean
         Project.create(params)
         Project.create(params)
         Project.create(params)
       end
-
       it "should return all projects" do
         expect(Project.count).to eq(3)
       end
-
     end
   end
 end

@@ -72,4 +72,21 @@ RSpec.configure do |config|
 
   # If you do not include this, then all factory_bot methods will need to be prefaced with FactoryBot
   config.include FactoryBot::Syntax::Methods
+
+  # Database cleaner between tests
+
+  config.use_transactional_fixtures = false
+
+  config.before(:all) do
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:all) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:all) do
+    DatabaseCleaner.clean
+  end
+
 end
