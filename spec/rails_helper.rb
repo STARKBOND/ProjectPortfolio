@@ -14,8 +14,10 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels/application_cable/' # web sockets
   add_filter '/app/helpers/' # helpers not implemented
   add_filter 'app/models/user.rb' # Had to add a large helper method to the user model in order for user update to work.
-  # add_filter '/app/models/application_record.rb' # 
-  # add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
+  add_filter '/app/models/application_record.rb' # couldn't find out how to test the abstract class here
+  add_filter 'app/controllers/users/confirmations_controller.rb' # Unused
+  add_filter 'app/controllers/users/omniauth_callbacks_controller.rb' # Unused
+  add_filter 'app/controllers/users/unlocks_controller.rb' # Unused
 end
 
 Shoulda::Matchers.configure do |config|
