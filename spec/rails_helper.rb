@@ -13,9 +13,16 @@ SimpleCov.start 'rails' do
   add_filter '/spec/' # for rspec
   add_filter '/app/channels/application_cable/' # web sockets
   add_filter '/app/helpers/' # helpers not implemented
-  # add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
-  # add_filter '/app/models/user.rb' 
+  add_filter 'app/models/user.rb' # Had to add a large helper method to the user model in order for user update to work.
   # add_filter '/app/models/application_record.rb' # 
+  # add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
