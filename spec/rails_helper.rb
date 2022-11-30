@@ -13,7 +13,7 @@ SimpleCov.start 'rails' do
   add_filter '/spec/' # for rspec
   add_filter '/app/channels/application_cable/' # web sockets
   add_filter '/app/helpers/' # helpers not implemented
-  add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
+  # add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
   # add_filter '/app/models/user.rb' 
   # add_filter '/app/models/application_record.rb' # 
 end

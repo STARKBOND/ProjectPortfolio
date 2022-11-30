@@ -72,5 +72,10 @@ RSpec.feature "Projects", type: :feature do
       expect(page).to have_content("Project was successfully destroyed")
       expect(Project.count).to eq(0)
     end
+
+    scenario "Log out" do
+      click_on "Log Out"
+      expect(page).to have_content("Logged out successfully.")
+    end
   end
 end
