@@ -32,24 +32,3 @@ Rails.application.routes.draw do
     #   delete '', to: 'users/registrations#destroy'
     # end
 end
-
-# cancel_user_registration_path	GET	/users/register/cancel(.:format)	
-# users/registrations#cancel
-
-# new_user_registration_path	GET	/users/register/cmon_let_me_in(.:format)	
-# users/registrations#new
-
-# edit_user_registration_path	GET	/users/register/edit(.:format)	
-# users/registrations#edit
-
-# user_registration_path	PATCH	/users/register(.:format)	
-# users/registrations#update
-
-# PUT	/users/register(.:format)	
-# users/registrations#update
-
-# DELETE	/users/register(.:format)	
-# users/registrations#destroy
-
-# POST	/users/register(.:format)	
-# users/registrations#create

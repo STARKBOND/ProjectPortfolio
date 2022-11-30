@@ -40,6 +40,7 @@ gem 'factory_bot_rails'
 # Creates random data for mocks and stubs
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
+# For testing flash message responses in the controller
 gem 'shoulda'
 
 group :production do
