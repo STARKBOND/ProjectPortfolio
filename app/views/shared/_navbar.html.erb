@@ -1,0 +1,26 @@
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="ms-4 navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1024px-Ruby_logo.svg.png" alt="" width="35"></a>
+    <a class="navbar-brand" href="#">Ruby Portfolio</a>
+    <div class="container-fluid">
+        <ul class="navbar-nav ml-auto">
+            <li class='nav-item active'><%= link_to 'Home', projects_path, { class: "nav-link", 'data-toggle': "tab" } %></li> <!-- TO DO: Active Tab -->
+            <li class='nav-item'><%= link_to 'Log In', new_user_session_path, class: 'nav-link' unless user_signed_in? %></li>  
+            <li class='nav-item'><%= link_to 'Register', new_user_registration_path, class: 'nav-link' unless user_signed_in? %></li>  
+            <li class='nav-item'><%= link_to 'Log Out', destroy_user_session_path, class: 'nav-link' if user_signed_in? %></li>  
+        </ul>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="d-flex justify-content-end">
+                <button class="d-none d-md-block navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -49,8 +49,8 @@ gem 'bootstrap', '~> 5.2.2'
 # JavaScript can optionally use jQuery
 gem 'jquery-rails'
 
-# Was typically included in examples, increases performance 
-gem 'turbolinks'
+# Was typically included in examples, increases performance
+# gem 'turbolinks'
 
 group :production do
   gem 'pg' # for Heroku deployment
