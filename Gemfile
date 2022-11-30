@@ -43,6 +43,12 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main
 # For testing flash message responses in the controller
 gem 'shoulda'
 
+# Front-end framework for HTML, CSS, JavaScript
+gem 'bootstrap', '~> 5.2.2'
+
+# JavaScript can optionally use jQuery
+gem 'jquery-rails'
+
 group :production do
   gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
