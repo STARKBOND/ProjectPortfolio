@@ -14,9 +14,6 @@ SimpleCov.start 'rails' do
   add_filter '/app/channels/application_cable/' # web sockets
   add_filter '/app/helpers/' # helpers not implemented
   add_filter '/app/controllers/users/' # TO DO: Med. Priority, X-Large Task
-  # not straightforward testing devise modules. 
-  # I suspect testing the controllers will satisfy these LOC.
-  # https://github.com/heartcombo/devise/tree/main/test/models did not increase coverage...
   # add_filter '/app/models/user.rb' 
   # add_filter '/app/models/application_record.rb' # 
 end
