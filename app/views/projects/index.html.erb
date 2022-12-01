@@ -1,8 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="p-5 mt-0 mb-4 bg-light rounded-3">
+  <div class="container-fluid py">
+    <h1 class="display-5 fw-bold">Projects</h1>
+      <p>
+        <%= "All projects are displayed below." if Project.all.any? %>
+        <%= "Looks empty! Projects will be displayed below." if Project.all.empty? %>
+      </p>
+    <%= button_to "New Project", {action: "new"}, method: :get, class: "btn btn-primary btn-lg" if user_signed_in? %>
+  </div>
+</div>
 
 <div id="projects">
   <div class="container py-4">
-  <h1 class="h1 mb-4" style="margin-bot: 10em !important;">Projects</h1>
     <div class="row align-items-md-stretch text-left">
       <% @projects.each do |project| %>
         <%= render project %>
@@ -11,6 +19,8 @@
   </div>
 </div>
 
-<%= link_to "New project", new_project_path if user_signed_in? %>
-
-<br>
+<div class="container py-4 fixed-bottom">
+  <footer class="pt-3 mt-4 text-muted border-top">
+    <a rel="license" class="me-4" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>This work is licensed under a <a rel="license" class="link-info" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+  </footer>
+</div>
