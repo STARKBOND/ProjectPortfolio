@@ -52,6 +52,8 @@ gem 'jquery-rails'
 # Was typically included in examples, increases performance
 gem 'turbolinks'
 
+gem 'active_link_to'
+
 group :production do
   gem 'pg' # for Heroku deployment
   gem 'rails_12factor'
