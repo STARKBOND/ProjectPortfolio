@@ -50,7 +50,7 @@ gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 
 # Was typically included in examples, increases performance
-# gem 'turbolinks'
+gem 'turbolinks'
 
 group :production do
   gem 'pg' # for Heroku deployment

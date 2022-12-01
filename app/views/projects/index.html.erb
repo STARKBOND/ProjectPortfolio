@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Projects</h1>
-
 <div id="projects">
-  <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
-  <% end %>
+  <div class="container py-4">
+  <h1 class="h1 mb-4" style="margin-bot: 10em !important;">Projects</h1>
+    <div class="row align-items-md-stretch text-left">
+      <% @projects.each do |project| %>
+        <%= render project %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <%= link_to "New project", new_project_path if user_signed_in? %>
