@@ -9,9 +9,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render "shared/navbar" %>
     <%= render "shared/flash" %>
     <%= yield %>
+    <div class="wrapper flex-grow-1"></div>
+    <div class="container relative-bottom">
+    <footer class="py-3 mt-4 text-muted border-top">
+      <a rel="license" class="me-4" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>This work is licensed under a <a rel="license" class="link-info" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </footer>
+    </div>
   </body>
 </html>

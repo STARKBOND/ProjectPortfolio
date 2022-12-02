@@ -1,8 +1,18 @@
-<%= render @project %>
+<div class="p-5 mt-0 mb-4 bg-light rounded-3">
+  <div class="container-fluid py">
+  <h1 class="display-5 fw-bold">Project Page</h1>
+    </div>
+    </div>
+    <div class="container py-4">
+    <div class="row align-items-md-stretch text-left">
+    <%= render @project %>
 
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) if user_signed_in? %>
-  <%= link_to "Back to projects", projects_path %>
+    <div>
+      <%= link_to "Edit this project", edit_project_path(@project), class: "me-3 link-primary", id: "editProject" if user_signed_in? %>
+      <%= link_to "Back to projects", projects_path, class: "link-primary", id: "backToProjects" %>
 
-  <%= button_to "Destroy this project", @project, method: :delete if user_signed_in? %>
+      <%= button_to "Destroy this project", @project, method: :delete, class: "my-4 btn btn-danger", id: "destroyProject" if user_signed_in? %>
+    </div>
+
+  </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
+    <h5 class="text-white h4">Project Portfolio App</h5>
+    <div class="col-md-4 justify-content-start text-white">Welcome to my project portfolio app. I enjoy figuring out technologies (sometimes) and (painfully) getting smarter!</div>
   </div>
 </div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -10,10 +10,10 @@
     <a class="navbar-brand" href="#">Ruby Portfolio</a>
     <div class="container-fluid">
         <ul class="navbar-nav ml-auto">
-            <li class='nav-item me-1' style="font-size: 1.125rem;"><%= active_link_to 'Home', projects_path, class: 'nav-link' %></li>
+            <li class='nav-item me-1' style="font-size: 1.125rem;"><%= active_link_to 'Home', root_path, class: 'nav-link' %></li>
             <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Log In', new_user_session_path, class: 'nav-link' unless user_signed_in? %></li>  
             <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Register', new_user_registration_path, class: 'nav-link' unless user_signed_in? %></li>  
-            <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Log Out', destroy_user_session_path, class: 'nav-link' if user_signed_in? %></li>  
+            <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Log Out', destroy_user_session_path, class: 'nav-link', id: "logOut" if user_signed_in? %></li>  
         </ul>
         <div class="navbar navbar-dark bg-dark box-shadow">
             <div class="d-flex justify-content-end">

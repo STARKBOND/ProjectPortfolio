@@ -1,9 +1,12 @@
-<h1>New project</h1>
+<div class="p-5 mt-0 mb-4 bg-light rounded-3">
+  <div class="container-fluid py">
+    <h1 class="display-5 fw-bold">New Project</h1>
 
-<%= render "form", project: @project %>
+    <%= render "form", project: @project %>
 
-<br>
+    <div>
+      <%= link_to "Back to projects", projects_path %>
+    </div>
 
-<div>
-  <%= link_to "Back to projects", projects_path %>
+  </div>
 </div>

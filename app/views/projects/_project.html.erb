@@ -1,12 +1,12 @@
 <div class="col-md-4">
   <div id="<%= dom_id project %>">
-    <div class="h-100 p-5 bg-light border rounded-3">
+    <div class="my-3 h-100 p-5 bg-light border rounded-3">
       <h2>
         <%= project.title %>
       </h2>
       <p>
         <%= project.description %>
-        <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-outline-secondary" %>
+        <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-outline-secondary" if current_page?(root_path) or current_page?(projects_path) %>
       </p>
     </div>
   </div>
