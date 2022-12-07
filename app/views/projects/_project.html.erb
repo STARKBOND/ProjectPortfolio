@@ -6,7 +6,7 @@
       </h2>
       <p>
         <%= project.description %>
-        <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-outline-secondary" if current_page?(root_path) or current_page?(projects_path) %>
+        <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-dark btn-sm" if current_page?(root_path) or current_page?(projects_path) %>
       </p>
     </div>
   </div>

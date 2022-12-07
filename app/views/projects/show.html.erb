@@ -8,10 +8,10 @@
     <%= render @project %>
 
     <div>
-      <%= link_to "Edit this project", edit_project_path(@project), class: "me-3 link-primary", id: "editProject" if user_signed_in? %>
-      <%= link_to "Back to projects", projects_path, class: "link-primary", id: "backToProjects" %>
+      <%= link_to "Edit this project", edit_project_path(@project), class: "me-3 link", id: "editProject" if user_signed_in? %>
+      <%= link_to "Back to projects", projects_path, class: "link", id: "backToProjects" %>
 
-      <%= button_to "Destroy this project", @project, method: :delete, class: "my-4 btn btn-danger", id: "destroyProject" if user_signed_in? %>
+      <%= button_to "Destroy this project", @project, method: :delete, class: "my-4 btn btn-dark", id: "destroyProject" if user_signed_in? %>
     </div>
 
   </div>
