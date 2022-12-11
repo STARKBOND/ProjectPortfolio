@@ -2,11 +2,11 @@
   <div class="container-fluid py">
     <h1 class="display-5 fw-bold">Log In</h1>
     <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
-      <div class="mb-3 field">
+      <div class="col-sm-3 mb-3 field">
         <%= f.label :email, class: "form-label" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", type: "email", class: "form-control", id: "inputEmail" %>
       </div>
-      <div class="mb-3 field">
+      <div class="col-sm-3 mb-3 field">
         <%= f.label :password, class: "form-label" %><br />
         <%= f.password_field :password, autocomplete: "current-password", type: "password", class: "form-control", id: "inputPassword" %>
       </div>

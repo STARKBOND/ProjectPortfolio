@@ -35,4 +35,5 @@
 /config/master.key
 
 # User specified .gitignore options
-coverage/
+/coverage/
+/app/assets/stylesheets/styles.bkp.css

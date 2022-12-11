@@ -1,215 +1,35 @@
-@font-face {
-    font-family: 'texgyreadventorregular';
-    src: url('../fonts/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.eot');
-    src: url('../fonts/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.woff') format('woff'),
-         url('../fonts/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.ttf') format('truetype'),
-         url('../fonts/texgyreadventor_regular_macroman/texgyreadventor-regular-webfont.svg#texgyreadventorregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    text-transform:uppercase;
-}
-@font-face {
-    font-family: 'texgyreadventorbold';
-    src: url('../fonts/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.eot');
-    src: url('../fonts/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.woff') format('woff'),
-         url('../fonts/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.ttf') format('truetype'),
-         url('../fonts/texgyreadventor_bold_macroman/texgyreadventor-bold-webfont.svg#texgyreadventorbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'texgyreadventoritalic';
-    src: url('../fonts/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.eot');
-    src: url('../fonts/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.woff') format('woff'),
-         url('../fonts/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.ttf') format('truetype'),
-         url('../fonts/texgyreadventor_italic_macroman/texgyreadventor-italic-webfont.svg#texgyreadventoritalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-html, body {
-    font-size:13px;
-    min-height:calc(100% - 0px);
-min-height:calc(var(--vh, 1vh) * 100);
-    color:#848484;
-}
-html {
-    height: calc(100% - 0px);
-height:calc(var(--vh, 1vh) * 100);
-    position: relative;
-background:#434343;
-}
-html::before {
-content: ' ';
-position: fixed;
-    background: url(../img/background1.jpg) no-repeat 100% 0;
--webkit-transform: translate3d(0,0,0);
-    background-position: 50% 50%;
-    background-size: cover;
-    height: calc(100% - 0px);
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-will-change: transform;
-z-index: -1;
-}
-@media (max-width: 748px) {
-    .col-md-9 { padding: 0; }
-    #content { padding: 8px;padding-bottom: 100px; }
-}
-
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'texgyreadventorregular';
-    text-transform:uppercase;
-    letter-spacing:.2em;
-    text-shadow: 0 0 10px rgba(238, 192, 55, 0.217);
-}
-h1 { font-size: 22px; }
-
-a { color: #E4C049; }
-a:hover { color: #F1CC55; }
-
-.light { color:white; }
-.dark { color:#555; }
-
 .btn {
     border-radius: 0;
     background: 0;
     border: 1px solid #FFF;
-    font-family: 'texgyreadventorregular';
+    /* font-family: 'texgyreadventorregular'; */
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 17px;
+    letter-spacing: 0.15em;
+    font-size: 15px;
     padding: 6px 25px 8px;
     color:white;
 }
-.btn:hover, .btn:active, .btn:focus {
-    background: #E4C049;
-    border: 1px solid rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, 0.83);
-    text-shadow: 0 0 7px #CF9120;
-}
-.btn.btn-dark {
-    border: 1px solid rgba(0, 0, 0, 0.67);
-    color: rgba(0, 0, 0, 0.78);
-}
-.btn.btn-dark:hover {
-    background: rgba(0, 0, 0, 0.85);
-    color: #FFF;
-    border: 1px solid rgba(0, 0, 0, 0);
-}
-.btn-success {
-    background: #E4C049;
-    border: 1px solid rgba(6, 6, 6, 0);
-}
-
 .btn-primary {
-    background: #E4C049;
+    background: #cc0000;
     border: 1px solid rgba(0, 0, 0, 0);
     color: rgba(255, 255, 255, 0.83);
-    text-shadow: 0 0 7px #CF9120;
+    text-shadow: 0 0 7px #a20000;
+    border-radius: 7px;
+    transition: all 0.25s ease 0s;
 }
-
 .btn-primary:hover {
-    border: 1px solid #E4C049;
-    color: #E4C049;
+    border: 1px solid #cc0000;
+    color: #cc0000;
     background:none;
     text-shadow:none;
 }
-
-.btn-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 9px 11px 9px;
-    color: #FFF;
-    background: #E4E4E4;
-    text-shadow: none;
-    font-size: 22px;
-    line-height: 22px;
-    border-color: #E4E4E4;
+a { color: #cc0000; }
+a:hover { color: #e31010; }
+h1,h2,h3,h4,h5,h6 {
+    letter-spacing:.075em;
+    text-shadow: 0 0 10px rgba(238, 55, 55, 0.161);
 }
-.btn-back:hover {
-    color: white;
-    background:E4C049;
-    text-shadow: 0 0 7px #CF9120;
-}
-
-.panel-light { padding:5px;background:#ececec;margin:0 0 15px;border-radius:2px; }
-.panel-gray { padding:5px;background:#b9b9b9;margin:0 0 15px;border-radius:2px; }
-.panel-dark { padding:5px;background:#3a3a3a;margin:0 0 15px;border-radius:2px; }
-.panel-dark.gold { background:#e4c049; }
-.panel-light h4,
-.panel-gray h4,
-.panel-dark h4 { text-align:center;font-family:texgyreadventorbold;line-height:1em;padding:5px 0 1px;font-size:15px }
-.panel-light h4 { color:#3a3a3a; }
-.panel-gray h4 { color:#f6f6f6; }
-.panel-dark h4 { color:#eeeeee; }
-
-.alert {
-    border: none;
-    border-left: 6px solid #E63A06;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.65);
-    font-family: 'Fira Mono';
-    padding: 15px 20px;
-    font-size: 14px;
-    color: #E63A06;
-    margin: 10px 20px 30px;
-}
-  .alert-warning {
-    color: white;
-    text-shadow: 0 0 4px #875a16a3;
-    background: #e4c049;
-    border-left-color: #b5952b;
-    text-align: center;
-    font-family: texGyreAdventorRegular;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    margin: 15px auto 5px;
-  }
-.alert-success {
-  border-left: 6px solid #559043;
-  color: #559043;
-  margin: 10px 20px 30px;
-}
-
 .form-control:focus, input:focus {
-    box-shadow: 0 0 13px -2px rgba(0, 0, 0, 0.177) inset;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.325) inset;
+    border-color:tint-color(#e31010, 60%)
 }
-
-#mainContent { width:calc(100% - 336px);font-family: 'Rubik', sans-serif; }
-#sidebar { width:336px; }
-#content.blog { margin-top:10px;width:1090px;margin: 20px auto;max-width: 90%;text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);font-size: 15px;line-height: 1.5em;z-index: 1;position: relative; }
-@media (max-width: 748px) {
-    #mainContent { width:100%; }
-    #sidebar { width:336px; }
-    #content.blog { width: 100%; margin: 0 auto; max-width: initial; }
-}
-#accessCode::-webkit-input-placeholder{
-    color: rgba(255, 255, 255, 0.58);
-    font-style: italic;
-    letter-spacing: 4px;
-    text-align: center;
-}
-#accessCode:-moz-placeholder {
-    color: rgba(255, 255, 255, 0.58);
-    font-style: italic;
-    letter-spacing: 4px;
-    text-align: center;
-}
-
-  /* Custom container */
-  .container {
-    margin: 0 auto;
-    max-width: 1000px;
-  }
-  .container > hr {
-    margin: 60px 0;
-  }

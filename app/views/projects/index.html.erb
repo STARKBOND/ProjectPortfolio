@@ -12,9 +12,13 @@
 <div id="projects">
   <div class="container py-4">
     <div class="row align-items-md-stretch text-left">
-      <% @projects.each do |project| %>
-        <%= render project %>
-      <% end %>
+          <% @projects.each do |project| %>
+            <div class="col-md-4 mb-4">
+            <div class="my-3 h-100 p-5 bg-light border rounded-3">
+            <%= render project %>
+            </div>
+            </div>
+          <% end %>
     </div>
   </div>
 </div>

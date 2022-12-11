@@ -1,13 +1,9 @@
-<div class="col-md-4">
-  <div id="<%= dom_id project %>">
-    <div class="my-3 h-100 p-5 bg-light border rounded-3">
-      <h2>
-        <%= project.title %>
-      </h2>
-      <p>
-        <%= project.description %>
-        <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-dark btn-sm" if current_page?(root_path) or current_page?(projects_path) %>
-      </p>
-    </div>
-  </div>
+<div id="<%= dom_id project %>">
+  <h2>
+    <%= project.title %>
+  </h2>
+  <p>
+    <%= project.description %>
+    <%= button_to "Show this project", {action: "show", id: project.id}, method: :get, class: "btn btn-primary btn-sm" if current_page?(root_path) or current_page?(projects_path) %>
+  </p>
 </div>
