@@ -4,23 +4,23 @@
     <div class="col-md-4 justify-content-start text-white">Welcome to my project portfolio app. I enjoy figuring out technologies (sometimes) and (painfully) getting smarter!</div>
   </div>
 </div>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="mx-4 navbar-brand" href="#">
+<nav class="navbar navbar-expand navbar-dark bg-dark mobile keep-scrolling">
+    <a class="mx-4 navbar-brand mobile" href="#">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/1024px-Ruby_logo.svg.png" alt="" width="35"></a>
     <a class="navbar-brand" href="#">Ruby Portfolio</a>
     <div class="container-fluid">
+    <div class="col">
         <ul class="navbar-nav ml-auto">
             <li class='nav-item me-1' style="font-size: 1.125rem;"><%= active_link_to 'Home', projects_path, class: 'nav-link' %></li>
             <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Log In', new_user_session_path, class: 'nav-link' unless user_signed_in? %></li>  
             <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Register', new_user_registration_path, class: 'nav-link' unless user_signed_in? %></li>  
             <li class='nav-item mx-1' style="font-size: 1.125rem;"><%= active_link_to 'Log Out', destroy_user_session_path, class: 'nav-link', id: "logOut" if user_signed_in? %></li>  
         </ul>
-        <div class="navbar navbar-dark bg-dark box-shadow">
-            <div class="d-flex justify-content-end">
-                <button class="d-none d-md-block navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        </div>
+        <div class="col-auto offset-3 pe-1">
+        <button class="d-flex navbar-toggler collapsed ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            </div>
-        </div>
+                </div>
     </div>
 </nav>
