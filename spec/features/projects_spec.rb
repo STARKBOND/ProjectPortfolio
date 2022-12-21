@@ -4,7 +4,7 @@ require 'database_cleaner/active_record'
 RSpec.feature "Projects", type: :feature do
   context "User / Project stub" do
     before(:each) do
-      user = User.create(:id => 1, :email => 'user@example.com', :password => 'password', :password_confirmation => 'password')
+      @user = User.create(:id => 1, :email => 'user@example.com', :password => 'password', :password_confirmation => 'password')
       @email = "user@example.com"
       @password = "password"
       visit new_user_session_path
@@ -30,12 +30,15 @@ RSpec.feature "Projects", type: :feature do
       click_button "Create Project"
       expect(page).to have_content("Description can't be blank")
     end
-  
 
     context "Update project" do
-      let(:project) { Project.create(title: "Test title", description: "Test content") }
+      # let(:project) { @user.projects.create(title: "Test title", description: "Test content") }
+      #project = @user.projects.create(title: "Test title", description: "Test content")
       before(:each) do
-        visit edit_project_path(project)
+        @user = FactoryBot.create(:user)
+        @mock = FactoryBot.build(:project)
+        @project = @user.projects.create(title: @mock.title, description: @mock.description)
+        visit edit_project_path(@project)
       end
 
       scenario "should be successful" do
@@ -68,7 +71,8 @@ RSpec.feature "Projects", type: :feature do
     
     scenario "remove project" do
       Project.destroy_all
-      Project.create(id: 1, title: "Test title", description: "Test content")
+      @user = FactoryBot.create(:user)
+      @project = @user.projects.create(id: 1, title: "Test title", description: "Test content")
       visit project_path(Project.find(1))
       click_on "destroyProject"
       expect(page).to have_content("Project was successfully destroyed")

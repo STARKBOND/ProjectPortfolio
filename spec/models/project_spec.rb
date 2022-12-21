@@ -4,22 +4,22 @@ require 'database_cleaner/active_record'
 RSpec.describe Project, type: :model do
   context "stub" do
     before(:all) do
-      user = create(:user)
+      @user = create(:user)
     end
     context "validations tests" do
       it "ensures the title is present" do
-        project = Project.new(description: "Content of the description")
-        expect(project.valid?).to eq(false)
+        @project = Project.new(description: "Content of the description")
+        expect(@project.valid?).to eq(false)
       end
 
       it "ensures the description is present" do
-        project = Project.new(title: "Title")
-        expect(project.valid?).to eq(false)
+        @project = Project.new(title: "Title")
+        expect(@project.valid?).to eq(false)
       end
       
       it "should be able to save project" do
-        project = Project.new(title: "Title", description: "Some description content goes here")
-        expect(project.save).to eq(true)
+        @project = @user.projects.create(title: "Test title", description: "Test content")
+        expect(@project.save).to eq(true)
       end
     end
 
@@ -27,9 +27,9 @@ RSpec.describe Project, type: :model do
       let(:params) { { title: "Title", description: "some description" } }
       before(:each) do
         DatabaseCleaner.clean
-        Project.create(params)
-        Project.create(params)
-        Project.create(params)
+        @user.projects.create(params)
+        @user.projects.create(params)
+        @user.projects.create(params)
       end
       it "should return all projects" do
         expect(Project.count).to eq(3)

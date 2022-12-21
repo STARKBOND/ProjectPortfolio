@@ -9,7 +9,8 @@ RSpec.describe ProjectsController, type: :controller do
   before(:context) do
     RSpec::Mocks.with_temporary_scope do
       @user = create(:user)
-      @project = Project.create(title: "Test title", description: "Test description")
+      @mock = build(:project)
+      @project = @user.projects.create(title: @mock.title, description: @mock.description)
     end
   end
 
