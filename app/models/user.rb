@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :projects
   # Update method was meant to be overridden. Spent hours on this test.
   # Code From: bit.ly/3VBRveD (I modified it to make it work)
   def update_with_password(params, *options)
